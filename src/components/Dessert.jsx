@@ -3,8 +3,7 @@ import addToCart from '../assets/images/icon-add-to-cart.svg';
 import incrementIcon from '../assets/images/icon-increment-quantity.svg';
 import decrementIcon from '../assets/images/icon-decrement-quantity.svg';
 
-export default function Dessert({imgSrc, dessertType, dessertName, price}) {
-  const [itemCount, setItemCount] = useState(0);
+export default function Dessert({imgSrc, dessertType, dessertName, price, itemCount, setItemCount}) {
   const [clicked, setIsClicked] = useState(false);
 
   function incrementCount() {
