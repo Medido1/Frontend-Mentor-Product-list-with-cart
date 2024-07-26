@@ -3,16 +3,20 @@ import addToCart from '../assets/images/icon-add-to-cart.svg';
 import incrementIcon from '../assets/images/icon-increment-quantity.svg';
 import decrementIcon from '../assets/images/icon-decrement-quantity.svg';
 
-export default function Dessert({imgSrc, dessertType, dessertName, price, itemCount, setItemCount}) {
+export default function Dessert(
+  {imgSrc, dessertType, dessertName, price, itemCount, setItemCount, totalCount, setTotalCount}
+) {
   const [clicked, setIsClicked] = useState(false);
 
   function incrementCount() {
     setItemCount(count => count + 1);
+    setTotalCount(totalCount => totalCount + 1);
   };
 
   function decrementCount() {
     if (itemCount < 1) return null;
     setItemCount(count => count -  1);
+    setTotalCount(totalCount => totalCount + 1);
   }
 
   function handleClick() {

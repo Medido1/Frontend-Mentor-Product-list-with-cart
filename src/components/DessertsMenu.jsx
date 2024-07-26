@@ -11,44 +11,53 @@ import cakeMobile from '../assets/images/image-cake-mobile.jpg';
 import brownieMobie from '../assets/images/image-brownie-mobile.jpg';
 import pannaCottaMobile from '../assets/images/image-panna-cotta-mobile.jpg';
 
-export default function DessertsMenu({itemCount, setItemCount}) {
+export default function DessertsMenu({itemCount, setItemCount, totalCount, setTotalCount}) {
   return (
     <div className="desserts_menu">
       <Dessert 
         imgSrc={waffle} dessertType="waffle" dessertName="Waffle with berries" 
         price="$6.50" itemCount={itemCount} setItemCount={setItemCount}
+        TotalCount={totalCount} setTotalCount={setTotalCount}
       />
       <Dessert 
         imgSrc={cremeBrulé} dessertType="Creme Brulé" dessertName="Vanilla Bean Créam brulé" 
         price="$7.00" itemCount={itemCount} setItemCount={setItemCount}
+        TotalCount={totalCount} setTotalCount={setTotalCount}
       />
       <Dessert 
         imgSrc={macaron} dessertType="Macaron" dessertName="Macaron mix of five"
         price="$8.00" itemCount={itemCount} setItemCount={setItemCount}
+        TotalCount={totalCount} setTotalCount={setTotalCount}
       />
       <Dessert 
         imgSrc={tiramisu} dessertType="Tiramisu" dessertName="Classic Tiramisu"
         price="$5.50" itemCount={itemCount} setItemCount={setItemCount}
+        TotalCount={totalCount} setTotalCount={setTotalCount}
       />
       <Dessert 
         imgSrc={baklavaMobile} dessertType="Baklava" dessertName="Pistachio Baklava"
         price="$4.00" itemCount={itemCount} setItemCount={setItemCount}
+        TotalCount={totalCount} setTotalCount={setTotalCount}
       />
       <Dessert 
         imgSrc={pieMobile} dessertType="Pie" dessertName="Lemon Meringie Pie"
         price="$5.00" itemCount={itemCount} setItemCount={setItemCount}
+        TotalCount={totalCount} setTotalCount={setTotalCount}
       />
       <Dessert 
         imgSrc={cakeMobile} dessertType="Cake" dessertName="Red Velvet Cake"
         price="$4.50" itemCount={itemCount} setItemCount={setItemCount}
+        TotalCount={totalCount} setTotalCount={setTotalCount}
       />
       <Dessert 
         imgSrc={brownieMobie} dessertType="Brownie" dessertName="Salted Caramel Brownie"
         price="$5.50" itemCount={itemCount} setItemCount={setItemCount}
+        TotalCount={totalCount} setTotalCount={setTotalCount}
       />
       <Dessert 
         imgSrc={pannaCottaMobile} dessertType="Panna Cotta" dessertName="Vanilla Panna Cotta"
         price="$6.50" itemCount={itemCount} setItemCount={setItemCount}
+        TotalCount={totalCount} setTotalCount={setTotalCount}
       />
     </div>
   )
