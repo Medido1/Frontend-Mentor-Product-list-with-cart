@@ -4,10 +4,9 @@ import incrementIcon from '../assets/images/icon-increment-quantity.svg';
 import decrementIcon from '../assets/images/icon-decrement-quantity.svg';
 
 export default function Dessert(
-  {imgSrc, dessertType, dessertName, price, itemCount, setItemCount, setTotalCount}
+  {imgSrc, category, dessertName, price, itemCount, setItemCount, setTotalCount}
 ) {
   const [clicked, setIsClicked] = useState(false);
-
   function incrementCount() {
     setItemCount(count => count + 1);
     setTotalCount(totalCount => totalCount + 1);
@@ -26,7 +25,7 @@ export default function Dessert(
   return (
     <div className="dessert">
       <div className="img_container">
-        <img src={imgSrc} alt={dessertType} className='dessert_img'/>
+        <img src={imgSrc} alt={category} className='dessert_img'/>
         {!clicked && 
           <button className='add_to_cart_btn' onClick={handleClick}>
             <img src={addToCart} alt='cart icon'/>
@@ -50,9 +49,9 @@ export default function Dessert(
         }
       </div>
       <div className="info_container">
-        <p>{dessertType}</p>
+        <p>{category}</p>
         <h3>{dessertName}</h3>
-        <div className="price">{price}</div>
+        <div className="price">${price}</div>
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'; 
 import DessertsMenu from './DessertsMenu';
 import YourCart from './YourCart';
-import data from '../assets/data.json';
+import data from '../data';
 
 export default function Main() {
   const [itemCount, setItemCount] = useState(0);
