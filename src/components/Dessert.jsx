@@ -4,7 +4,7 @@ import incrementIcon from '../assets/images/icon-increment-quantity.svg';
 import decrementIcon from '../assets/images/icon-decrement-quantity.svg';
 
 export default function Dessert(
-  {imgSrc, dessertType, dessertName, price, itemCount, setItemCount, totalCount, setTotalCount}
+  {imgSrc, dessertType, dessertName, price, itemCount, setItemCount, setTotalCount}
 ) {
   const [clicked, setIsClicked] = useState(false);
 
