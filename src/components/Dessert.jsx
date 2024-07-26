@@ -4,17 +4,23 @@ import incrementIcon from '../assets/images/icon-increment-quantity.svg';
 import decrementIcon from '../assets/images/icon-decrement-quantity.svg';
 
 export default function Dessert(
-  {imgSrc, category, dessertName, price, itemCount, setItemCount, setTotalCount}
+  {imgSrc, category, 
+    dessertName, price,
+     setTotalCount, itemCount, 
+     setItemCount, updateItemNumber}
 ) {
+
   const [clicked, setIsClicked] = useState(false);
   function incrementCount() {
-    setItemCount(count => count + 1);
+    setItemCount(itemCount => itemCount + 1);
+    updateItemNumber(dessertName, itemCount);
     setTotalCount(totalCount => totalCount + 1);
   };
 
   function decrementCount() {
     if (itemCount < 1) return null;
-    setItemCount(count => count -  1);
+    setItemCount(itemCount => itemCount - 1);
+    updateItemNumber(dessertName, itemCount);
     setTotalCount(totalCount => totalCount - 1);
   }
 
