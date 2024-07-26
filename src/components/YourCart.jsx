@@ -6,8 +6,13 @@ export default function YourCart({TotalCount}) {
   return (
     <div className="your_cart">
       <h2>Your cart ({TotalCount})</h2>
-      <img src={emptyCart} alt='empty cart'/>
-      <p className='empty_cart_text'>Your added items will appear here</p>
+      {TotalCount === 0 && 
+        <>
+          <img src={emptyCart} alt='empty cart'/>
+          <p className='empty_cart_text'>Your added items will appear here</p>
+        </>
+      }
+      
     </div>
   )
 }

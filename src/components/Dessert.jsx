@@ -16,7 +16,7 @@ export default function Dessert(
   function decrementCount() {
     if (itemCount < 1) return null;
     setItemCount(count => count -  1);
-    setTotalCount(totalCount => totalCount + 1);
+    setTotalCount(totalCount => totalCount - 1);
   }
 
   function handleClick() {
