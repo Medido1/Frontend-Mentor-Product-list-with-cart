@@ -1,0 +1,17 @@
+.your_cart {
+  background-color: white;
+  padding: 1.25rem;
+  border-radius: .5rem;
+  color: var(--Red);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.your_cart img {
+  align-self: center;
+}
+
+.empty_cart_text {
+  color: var(--rose_900);
+}
