@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/DessertsMenu.css';
 import Dessert from './Dessert';
 import waffle from '../assets/images/image-waffle-mobile.jpg';
