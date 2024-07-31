@@ -7,19 +7,20 @@ export default function Dessert(
   {imgSrc, category, 
     dessertName, price,
      setTotalCount, itemCount, 
-     setItemCount, updateItemNumber}
+    updateItemNumber}
 ) {
 
   const [clicked, setIsClicked] = useState(false);
+
   function incrementCount() {
-    setItemCount(itemCount => itemCount + 1);
+    itemCount += 1;
     updateItemNumber(dessertName, itemCount);
     setTotalCount(totalCount => totalCount + 1);
   };
 
   function decrementCount() {
     if (itemCount < 1) return null;
-    setItemCount(itemCount => itemCount - 1);
+    itemCount -= 1;
     updateItemNumber(dessertName, itemCount);
     setTotalCount(totalCount => totalCount - 1);
   }
