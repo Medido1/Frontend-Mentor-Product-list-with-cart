@@ -19,7 +19,7 @@ export default function Main() {
         myData = {myData} updateItemNumber={updateItemNumber}
         TotalCount={TotalCount} setTotalCount={setTotalCount}
       />
-      <YourCart TotalCount={TotalCount}/>
+      <YourCart myData={myData} TotalCount={TotalCount}/>
     </main>
   )
 }
