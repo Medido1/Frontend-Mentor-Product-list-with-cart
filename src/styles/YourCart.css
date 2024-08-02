@@ -76,3 +76,15 @@
   background-color: var(--Rose_100);
   padding: 1rem;
 }
+
+.btn {
+  background-color: var(--Red);
+  border-radius: 100vmax;
+  padding: 1rem 1.5rem;
+  color: white;
+  border: 0;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
