@@ -5,7 +5,7 @@ import '../styles/YourCart.css';
 import CartItems from './CartItems';
 import ConfirmedWindow from './ConfirmedWindow';
 
-export default function YourCart({TotalCount, myData, isConfirmed, setIsConfirmed}) {
+export default function YourCart({TotalCount, myData, updateData, isConfirmed, setIsConfirmed}) {
  
   function calculateTotalPrice() {
     return myData.reduce((total, item) => {
@@ -22,7 +22,7 @@ export default function YourCart({TotalCount, myData, isConfirmed, setIsConfirme
           <p className='empty_cart_text'>Your added items will appear here</p>
         </>
       }
-      {!isConfirmed && <CartItems myData={myData}/>}
+      {!isConfirmed && <CartItems myData={myData} updateData={updateData}/>}
       {TotalCount !== 0 && isConfirmed === false && 
         <>
           <div className="total_container">

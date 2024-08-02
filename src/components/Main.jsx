@@ -21,7 +21,8 @@ export default function Main() {
         TotalCount={TotalCount} setTotalCount={setTotalCount}
         isConfirmed={isConfirmed} 
       />
-      <YourCart myData={myData} TotalCount={TotalCount}
+      <YourCart myData={myData} updateData={updateData}
+        TotalCount={TotalCount}
         isConfirmed={isConfirmed} setIsConfirmed={setIsConfirmed}
       />
     </main>

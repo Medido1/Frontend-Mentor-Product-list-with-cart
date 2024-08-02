@@ -1,7 +1,16 @@
 import React from 'react';
 import removeBtn from '../assets/images/icon-remove-item.svg';
 
-export default function CartItems({myData}) {
+export default function CartItems({myData, updateData}) {
+
+  function removeItem(name) {
+    updateData(prevData => 
+      prevData.map(item => 
+        item.name === name ? {...item, number: 0} : item
+      )
+    );
+  }
+
   return (
     <ul className='cart_items'>
       {myData.map((item) => {
@@ -16,7 +25,7 @@ export default function CartItems({myData}) {
               </div>
           </div>
           <div className="item_right">
-            <img src={removeBtn} className='icon remove'/>
+            <img src={removeBtn} className='icon remove' onClick={() => removeItem(item.name)}/>
           </div>
         </li>
         } else return null;
