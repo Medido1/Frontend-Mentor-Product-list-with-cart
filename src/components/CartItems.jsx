@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import removeBtn from '../assets/images/icon-remove-item.svg';
 
 export default function CartItems({myData}) {
@@ -17,7 +17,7 @@ export default function CartItems({myData}) {
           </div>
           <div className="item_right">
             <img src={removeBtn} className='icon remove'/>
-            </div>
+          </div>
         </li>
         } else return null;
       })}

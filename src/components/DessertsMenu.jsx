@@ -3,11 +3,11 @@ import '../styles/DessertsMenu.css';
 import Dessert from './Dessert';
 
 export default function DessertsMenu(
-  {setTotalCount, myData, updateItemNumber}
+  {setTotalCount, myData, updateItemNumber, isConfirmed}
   ){
   return (
     <ul className="desserts_menu">
-      {myData.map((info) => {
+      {!isConfirmed && myData.map((info) => {
         return <Dessert key={info.name}
           imgSrc={info.image.mobile} category={info.category}
           dessertName={info.name} price={info.price}

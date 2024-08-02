@@ -6,6 +6,7 @@ import data from '../data';
 export default function Main() {
   const [TotalCount, setTotalCount] = useState(0);
   const [myData, updateData] = useState(data);
+  const [isConfirmed, setIsConfirmed] = useState(false);
 
   const updateItemNumber = (name, newNumber) => {
     updateData((prevData) =>
@@ -18,8 +19,11 @@ export default function Main() {
       <DessertsMenu 
         myData = {myData} updateItemNumber={updateItemNumber}
         TotalCount={TotalCount} setTotalCount={setTotalCount}
+        isConfirmed={isConfirmed} 
       />
-      <YourCart myData={myData} TotalCount={TotalCount}/>
+      <YourCart myData={myData} TotalCount={TotalCount}
+        isConfirmed={isConfirmed} setIsConfirmed={setIsConfirmed}
+      />
     </main>
   )
 }
