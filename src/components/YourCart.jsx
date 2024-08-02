@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import emptyCart from '../assets/images/illustration-empty-cart.svg';
-import removeBtn from '../assets/images/icon-remove-item.svg';
 import carbonIcon from '../assets/images/icon-carbon-neutral.svg';
 import '../styles/YourCart.css';
+import CartItems from './CartItems';
 
 export default function YourCart({TotalCount, myData}) {
   const [isConfirmed, setIsConfirmed] = useState(false);
@@ -22,27 +22,7 @@ export default function YourCart({TotalCount, myData}) {
           <p className='empty_cart_text'>Your added items will appear here</p>
         </>
       }
-      <ul className='cart_items'>
-          {myData.map((item) => {
-            if (item.number > 0) {
-              return <li key={item.name}>
-              <div className="item_left">
-                <p className='item_name'>{item.name}</p>
-                <div className="item_info">
-                  <p className="number_of_items">{item.number}x</p>
-                  <p className='item_price'>@${item.price}</p>
-                  <p>${item.price * item.number}</p>
-                </div>
-              </div>
-              <div className="item_right">
-                <img src={removeBtn} className='icon remove'/>
-              </div>
-            </li>
-            } else {
-              return null;
-            }
-          })}
-        </ul>
+      <CartItems myData={myData}/>
         {TotalCount !== 0 && 
           <>
             <div className="total_container">
