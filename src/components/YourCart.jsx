@@ -35,7 +35,7 @@ export default function YourCart({
           <img src={carbonIcon} className='icon'/>
           <p>this is a <b>carbon-netural</b> delivery</p>
         </div>
-        <button className="btn" onClick={() => setIsConfirmed(true)}>Confirm Order</button>
+        <button className="btn confirm" onClick={() => setIsConfirmed(true)}>Confirm Order</button>
         </>
       }
     {isConfirmed && 

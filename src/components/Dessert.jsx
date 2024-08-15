@@ -42,13 +42,13 @@ export default function Dessert(
         {clicked && 
           <button className='clicked_cart_btn'>
             <div className='icon_container left'>
-              <img src={decrementIcon} alt="decrement" className='icon count'
+              <img src={decrementIcon} alt="decrement" className='icon count decrement'
                 onClick={decrementCount}
               />
             </div>
             <p>{itemCount}</p>
             <div className="icon_container right">
-              <img src={incrementIcon} alt='increment' className='icon count'
+              <img src={incrementIcon} alt='increment' className='icon count increment'
                 onClick={incrementCount}
               />
             </div>

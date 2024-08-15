@@ -92,3 +92,11 @@
   opacity: .8;
   font-size: .875rem;
 }
+
+@media (min-width: 768px) {
+  .confirmed_window {
+    width: 25%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}

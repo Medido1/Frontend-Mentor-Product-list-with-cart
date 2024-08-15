@@ -43,3 +43,11 @@ body {
 .main {
   padding: 1.25rem;
 }
+
+@media (min-width : 768px) {
+  .main {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}

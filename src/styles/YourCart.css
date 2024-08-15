@@ -26,10 +26,16 @@
 }
 
 .icon.remove {
+  cursor: pointer;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.5);
   width: 20px;
   padding: .25rem;
+}
+
+.icon.remove:hover {
+  border: 1px solid rgba(0, 0, 0, 1);
+  background-color: black;
 }
 
 .item_name {
@@ -87,4 +93,11 @@
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
+}
+
+.btn:hover {
+  background-color: hsl(14, 86%, 32%);
+}
+@media (min-width : 768px) {
+  
 }
