@@ -5,7 +5,9 @@ import '../styles/YourCart.css';
 import CartItems from './CartItems';
 import ConfirmedWindow from './ConfirmedWindow';
 
-export default function YourCart({TotalCount, myData, updateData, isConfirmed, setIsConfirmed}) {
+export default function YourCart({
+  TotalCount, myData, updateData, isConfirmed, setIsConfirmed, setTotalCount
+  }) {
  
   function calculateTotalPrice() {
     return myData.reduce((total, item) => {
@@ -38,7 +40,9 @@ export default function YourCart({TotalCount, myData, updateData, isConfirmed, s
       }
     {isConfirmed && 
       <>
-        <ConfirmedWindow myData={myData} calculateTotalPrice={calculateTotalPrice}/>
+        <ConfirmedWindow myData={myData} calculateTotalPrice={calculateTotalPrice}
+          setIsConfirmed={setIsConfirmed} setTotalCount={setTotalCount}
+        />
       </>
     }
     </div>

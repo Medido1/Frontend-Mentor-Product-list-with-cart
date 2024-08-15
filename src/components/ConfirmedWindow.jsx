@@ -3,7 +3,7 @@ import confirmedIcon from '../assets/images/icon-order-confirmed.svg';
 import '../styles/ConfirmedWindow.css';
 import ConfirmedCartItems from './ConfirmedCartItems';
 
-export default function confirmedWindow({myData, calculateTotalPrice}) {
+export default function confirmedWindow({myData, calculateTotalPrice, setIsConfirmed, setTotalCount}) {
   return (
     <div className="confirmed_window">
       <header>
@@ -11,7 +11,9 @@ export default function confirmedWindow({myData, calculateTotalPrice}) {
         <h2>Order Confirmed</h2>
         <p>We hope you enjoy your food!</p>
       </header>
-      <ConfirmedCartItems myData={myData} calculateTotalPrice={calculateTotalPrice}/>
+      <ConfirmedCartItems myData={myData} calculateTotalPrice={calculateTotalPrice}
+        setIsConfirmed={setIsConfirmed}  setTotalCount={setTotalCount}
+      />
     </div>
   )
 }

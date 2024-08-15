@@ -1,7 +1,14 @@
 import React from 'react';
 import '../styles/ConfirmedWindow.css';
 
-export default function ConfirmedCartItems({myData, calculateTotalPrice}) {
+export default function ConfirmedCartItems({myData, calculateTotalPrice, setIsConfirmed, setTotalCount}) {
+  function startNewOrder() {
+    setIsConfirmed(false);
+    setTotalCount(0);
+    myData.forEach(item => {
+      item.number = 0;
+    })
+  }
   return (
     <ul className='confirmed_cart_items'>
       {myData.map((item) => {
@@ -22,7 +29,7 @@ export default function ConfirmedCartItems({myData, calculateTotalPrice}) {
         <p>Order Total</p>
         <p className='total_price'>${calculateTotalPrice()}</p>
       </div>
-      <button className='btn'>Start New Order</button>
+      <button className='btn' onClick={startNewOrder}>Start New Order</button>
     </ul>
     
   )
