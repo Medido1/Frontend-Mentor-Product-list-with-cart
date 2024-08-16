@@ -1,8 +1,63 @@
-# React + Vite
+# Frontend Mentor - Product list with cart solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the [Product list with cart page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d).
+## Table of contents
 
-Currently, two official plugins are available:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
+
+### The challenge
+
+Your users should be able to:
+
+  -Add items to the cart and remove them
+  -Increase/decrease the number of items in the cart
+  -See an order confirmation modal when they click "Confirm Order"
+  -Reset their selections when they click "Start New Order"
+  -View the optimal layout for the interface depending on their device's screen size
+  -See hover and focus states for all interactive elements on the page
+
+### Screenshot
+
+  ## Desktop 
+  ![](./src//assets/screen%20shots/desktopSS.png)
+
+  ## Desktop Confirmed
+
+  ![](./src//assets//screen%20shots//desktopConfirmedSS.png)
+
+  ## Mobile 
+  ![](./src/assets/screen%20shots/mobileSS.png)
+
+  ## Mobile Confirmed
+
+  ![](./src/assets/screen%20shots/mobileConfirmedSS.png)
+
+
+### Links
+
+- Solution URL: [solution](https://github.com/Medido1/Frontend-Mentor-Product-list-with-cart)
+- Live Site URL: [live site](https://plwc.netlify.app/)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- CSS Grid
+- Flexbox
+- Mobile-first workflow
+- React
+
+## Author
+
+- Frontend Mentor - [@Medido1](https://www.frontendmentor.io/profile/Medido1)
+- GitHub - [@Medido1](https://github.com/Medido1)
