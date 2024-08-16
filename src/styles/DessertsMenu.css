@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 1rem;
+  list-style: none;
 }
 
 .img_container {

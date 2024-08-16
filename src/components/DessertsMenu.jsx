@@ -19,8 +19,8 @@ export default function DessertsMenu(
   return (
     <ul className="desserts_menu">
       {(!isConfirmed || !isMobile) && myData.map((info) => {
-        return <Dessert 
-          key={info.name}
+        return <li key={info.name}>
+          <Dessert 
           imgSrc={isMobile ? info.image.mobile : info.image.desktop} 
           category={info.category}
           dessertName={info.name} 
@@ -29,6 +29,7 @@ export default function DessertsMenu(
           updateItemNumber={updateItemNumber}
           itemCount={info.number}
           />
+        </li>
       })}
     </ul>
   )
