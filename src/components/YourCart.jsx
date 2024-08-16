@@ -6,7 +6,7 @@ import CartItems from './CartItems';
 import ConfirmedWindow from './ConfirmedWindow';
 
 export default function YourCart({
-  TotalCount, myData, updateData, isConfirmed, setIsConfirmed, setTotalCount
+  totalCount, myData, updateData, isConfirmed, setIsConfirmed, setTotalCount
   }) {
  
   function calculateTotalPrice() {
@@ -17,15 +17,15 @@ export default function YourCart({
 
   return (
     <div className="your_cart">
-      <h2>Your cart ({TotalCount})</h2>
-      {TotalCount === 0 && 
+      <h2>Your cart ({totalCount})</h2>
+      {totalCount === 0 && 
         <>
           <img src={emptyCart} alt='empty cart'/>
           <p className='empty_cart_text'>Your added items will appear here</p>
         </>
       }
       {!isConfirmed && <CartItems myData={myData} updateData={updateData}/>}
-      {TotalCount !== 0 && isConfirmed === false && 
+      {totalCount !== 0 && isConfirmed === false && 
         <>
           <div className="total_container">
           <p>Order Total</p>
