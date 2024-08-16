@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useMemo} from 'react';
 import emptyCart from '../assets/images/illustration-empty-cart.svg';
 import carbonIcon from '../assets/images/icon-carbon-neutral.svg';
 import '../styles/YourCart.css';
@@ -8,6 +8,8 @@ import ConfirmedWindow from './ConfirmedWindow';
 export default function YourCart({
   totalCount, myData, updateData, isConfirmed, setIsConfirmed, setTotalCount
   }) {
+    /* memoize the result of the computation */
+  const totalPrice = useMemo(() => calculateTotalPrice(), [myData]);
  
   function calculateTotalPrice() {
     return myData.reduce((total, item) => {
@@ -29,10 +31,10 @@ export default function YourCart({
         <>
           <div className="total_container">
           <p>Order Total</p>
-          <p className='total_price'>${calculateTotalPrice()}</p>
+          <p className='total_price'>${totalPrice}</p>
         </div>
         <div className="delivery_note_container">
-          <img src={carbonIcon} className='icon'/>
+          <img src={carbonIcon} className='icon' alt='carbon icon'/>
           <p>this is a <b>carbon-netural</b> delivery</p>
         </div>
         <button className="btn confirm" onClick={() => setIsConfirmed(true)}>Confirm Order</button>
