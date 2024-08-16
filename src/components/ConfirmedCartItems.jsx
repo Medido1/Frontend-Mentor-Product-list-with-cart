@@ -29,7 +29,9 @@ export default function ConfirmedCartItems({myData, calculateTotalPrice, setIsCo
         <p>Order Total</p>
         <p className='total_price'>${calculateTotalPrice()}</p>
       </div>
-      <button className='btn' onClick={startNewOrder}>Start New Order</button>
+      <button className='btn' onClick={startNewOrder} aria-label="Start a new order">
+        Start New Order
+      </button>
     </ul>
     
   )
