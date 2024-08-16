@@ -21,7 +21,7 @@ export default function DessertsMenu(
       {(!isConfirmed || !isMobile) && myData.map((info) => {
         return <Dessert 
           key={info.name}
-          imgSrc={info.image.mobile} 
+          imgSrc={isMobile ? info.image.mobile : info.image.desktop} 
           category={info.category}
           dessertName={info.name} 
           price={info.price}

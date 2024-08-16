@@ -93,7 +93,7 @@
   }
   .add_to_cart_btn,
   .clicked_cart_btn {
-    bottom: -25%;
+    bottom: -16%;
     width: 60%;
   }
 }
