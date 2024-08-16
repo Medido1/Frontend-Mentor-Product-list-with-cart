@@ -25,7 +25,10 @@ export default function CartItems({myData, updateData}) {
               </div>
           </div>
           <div className="item_right">
-            <img src={removeBtn} className='icon remove' onClick={() => removeItem(item.name)}/>
+            <img 
+            src={removeBtn} alt='remove item' 
+            className='icon remove' onClick={() => removeItem(item.name)}
+            />
           </div>
         </li>
         } else return null;
