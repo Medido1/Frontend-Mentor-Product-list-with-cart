@@ -13,16 +13,15 @@ export default function Dessert(
   const [clicked, setIsClicked] = useState(false);
 
   function incrementCount() {
-    itemCount += 1;
-    updateItemNumber(dessertName, itemCount);
+    updateItemNumber(dessertName, itemCount + 1);
     setTotalCount(totalCount => totalCount + 1);
   };
 
   function decrementCount() {
-    if (itemCount < 1) return null;
-    itemCount -= 1;
-    updateItemNumber(dessertName, itemCount);
-    setTotalCount(totalCount => totalCount - 1);
+    if (itemCount > 0){
+      updateItemNumber(dessertName, itemCount - 1);
+      setTotalCount(totalCount => totalCount - 1);
+    }
   }
 
   function handleClick() {
@@ -41,16 +40,12 @@ export default function Dessert(
         }
         {clicked && 
           <button className='clicked_cart_btn'>
-            <div className='icon_container left'>
-              <img src={decrementIcon} alt="decrement" className='icon count decrement'
-                onClick={decrementCount}
-              />
+            <div className='icon_container left' onClick={decrementCount}>
+              <img src={decrementIcon} alt="decrement" className='icon count decrement'/>
             </div>
             <p>{itemCount}</p>
-            <div className="icon_container right">
-              <img src={incrementIcon} alt='increment' className='icon count increment'
-                onClick={incrementCount}
-              />
+            <div className="icon_container right" onClick={incrementCount}>
+              <img src={incrementIcon} alt='increment' className='icon count increment'/>
             </div>
           </button>
         }
