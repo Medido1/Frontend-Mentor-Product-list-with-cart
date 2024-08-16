@@ -17,13 +17,18 @@ export default function Main() {
   return (
     <main className="main">
       <DessertsMenu 
-        myData = {myData} updateItemNumber={updateItemNumber}
-        totalCount={totalCount} setTotalCount={setTotalCount}
+        myData = {myData} 
+        updateItemNumber={updateItemNumber}
+        totalCount={totalCount} 
+        setTotalCount={setTotalCount}
         isConfirmed={isConfirmed} 
       />
-      <YourCart myData={myData} updateData={updateData}
+      <YourCart 
+        myData={myData} 
+        updateData={updateData}
         totalCount={totalCount}
-        isConfirmed={isConfirmed} setIsConfirmed={setIsConfirmed}
+        isConfirmed={isConfirmed} 
+        setIsConfirmed={setIsConfirmed}
         setTotalCount={setTotalCount}
       />
     </main>
