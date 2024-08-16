@@ -4,7 +4,7 @@ import YourCart from './YourCart';
 import data from '../data';
 
 export default function Main() {
-  const [TotalCount, setTotalCount] = useState(0);
+  const [totalCount, setTotalCount] = useState(0);
   const [myData, updateData] = useState(data);
   const [isConfirmed, setIsConfirmed] = useState(false);
 
@@ -18,11 +18,11 @@ export default function Main() {
     <main className="main">
       <DessertsMenu 
         myData = {myData} updateItemNumber={updateItemNumber}
-        TotalCount={TotalCount} setTotalCount={setTotalCount}
+        totalCount={totalCount} setTotalCount={setTotalCount}
         isConfirmed={isConfirmed} 
       />
       <YourCart myData={myData} updateData={updateData}
-        TotalCount={TotalCount}
+        totalCount={totalCount}
         isConfirmed={isConfirmed} setIsConfirmed={setIsConfirmed}
         setTotalCount={setTotalCount}
       />
