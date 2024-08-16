@@ -23,6 +23,8 @@ export default function DessertsMenu(
           <Dessert 
           imgSrc={isMobile ? info.image.mobile : info.image.desktop} 
           category={info.category}
+          width = {isMobile ? 654: 502}
+          height = {isMobile ? 240: 300}
           dessertName={info.name} 
           price={info.price}
           setTotalCount={setTotalCount} 

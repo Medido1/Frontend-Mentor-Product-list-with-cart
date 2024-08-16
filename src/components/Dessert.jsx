@@ -7,7 +7,8 @@ export default function Dessert(
   {imgSrc, category, 
     dessertName, price,
      setTotalCount, itemCount, 
-    updateItemNumber}
+    updateItemNumber,
+    width, height}
 ) {
 
   const [clicked, setIsClicked] = useState(false);
@@ -31,7 +32,7 @@ export default function Dessert(
   return (
     <div className="dessert">
       <div className="img_container">
-        <img src={imgSrc} alt={category} className='dessert_img'/>
+        <img src={imgSrc} alt={category} width={width} height={height} className='dessert_img'/>
         {!clicked && 
           <button className='add_to_cart_btn' onClick={handleClick}>
             <img src={addToCart} alt='cart icon'/>
